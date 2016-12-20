@@ -1,0 +1,13 @@
+/* Gandikota Ramesh, Sujan    Account :  jadrn018
+				CS545, Fall 2015 	project #3	*/
+
+table {
+    width: 400px;
+    margin: auto;
+    border: 1px solid black;
+    }
+    
+th, td  {
+    border: 1px solid black;
+    padding: 5px;
+    }   

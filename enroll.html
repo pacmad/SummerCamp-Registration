@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<!-- Gandikota ramesh, Sujan    Account :  jadrn018
+        CS545, Fall 2015
+        Project #3 -->
+
+    <head>
+        <meta http-equiv="content-type" 
+              content="text/html;charset=utf-8" />
+        <title>Enroll</title>
+        <link rel="stylesheet" type="text/css" href="css/summer_css.css" /> 
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/form.js"></script>
+    </head>
+    <body>
+        <div id="top_heading">
+            <h1>Happy days Summer Camp</h1>
+        </div>
+        <div id="heading">
+        <img src="images/logo.png" alt="logo" />
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="Programs.html">Our Programs</a></li>
+          <li><a href="enroll.html">Enroll now!</a></li>
+        </ul>
+      </div>
+      <div id="form_data"> 
+        <h1>Enroll Now!</h1>
+        <form name="personal_info" 
+              action="process_request.php"
+              enctype = "multipart/form-data"
+              method="post"
+              id ="signup">
+        <fieldset>
+        <legend>Parents Information</legend>
+        <ul>
+            <li><label><span>&#42;</span>First Name</label>
+                <input type="text" name="fname" size="25" />
+                <label>Middle Name</label>
+                <input type="text" name="mname" size="25" /></li>                     
+            <li><label><span>&#42;</span>Last Name</label>
+                <input type="text" name="lname" size="25" /></li> 
+            <li><label><span>&#42;</span>Relationship</label>
+            	<input type="radio" name="relationship" value="Father" />&nbsp; Father &nbsp;
+            	<input type="radio" name="relationship" value="Mother" />&nbsp; Mother &nbsp;
+            	<input type="radio" name="relationship" value="Guardian" />&nbsp; Guardian &nbsp; </li>	
+            <li><label><span>&#42;</span>Address Line 1</label>
+                <input type="text" name="address" size="55" /></li>
+            <li><label>Address Line 2</label>
+                <input id="input-move" type="text" name="address_line" size="55" /></li>        
+            <li><label><span>&#42;</span>City</label>
+                <input type="text" name="city" size="25" /> 
+                <label><span>&#42;</span>State</label>
+                <input type="text" name="state" size="3" />      
+                <label><span>&#42;</span>Zip</label>
+                <input type="text" name="zip" size="10" maxlength="10" /></li>      
+            <li><label>Home phone</label>
+                (<input type="text" name="home_area_phone" size="4" maxlength="3" />)  
+                 <input type="text" name="home_prefix_phone" size="4" maxlength="3" />
+                <input type="text" name="home_phone" size="5" maxlength="4" /></li> 
+            <li><label><span>&#42;</span>Cell phone</label>
+                (<input type="text" name="area_phone" size="4" maxlength="3" />)  
+                 <input type="text" name="prefix_phone" size="4" maxlength="3" />
+                <input type="text" name="phone" size="5" maxlength="4" /></li> 
+            <li><label><span>&#42;</span>EMail</label>
+                <input type="text" name="email" size="25" /></li>
+        </ul>
+    	 </fieldset>
+    	 <fieldset>
+    	 	<legend>Child Information</legend>
+    	 		<ul>
+    	 			<li><label><span>&#42;</span>First Name</label>
+             			 <input type="text" name="cfname" size="25" />
+                		 <label>Middle Name</label>
+                		 <input type="text" name="cmname" size="25" /></li>                     
+            		<li><label><span>&#42;</span>Last Name</label>
+                		 <input type="text" name="clname" size="25" /></li> 
+                	<li><label>Preferred Name</label>
+                		<input type="text" name="pname" size="25" /></li>
+                  <li><label><span>&#42;</span>Choose picture</label>
+                    <input type="file" name="profile_pic" accept="image/*" />
+                  </li>
+                	<li><label><span>&#42;</span>Gender</label>
+                		<input type="radio" name="gender" value="M" />Male
+                		<input type="radio" name="gender" value="F" />Female</li>
+                  <li><label><span>&#42;</span>Date of Birth</label>
+        <input type="text" name="month" placeholder="mm" id="month" size="2" maxlength="2"> /
+              <input type="text" name="date" placeholder="dd" id="date" size="2" maxlength="2"> /
+              <input type="text" name="year" placeholder="yyyy" id="year" size="4" maxlength="4"></li>
+                	<li><label class="text-area">Medical Conditions</label>
+                    <textarea id="text-move" name="medical" rows="4" cols="50"></textarea></li>
+                	<li><label class="text-area">Special Dietary Requirements</label>
+                		<textarea name="dietary" rows="4" cols="50"></textarea></li>
+                    <li><label><span>&#42;</span>Emergency Contact Name</label>
+                    <input type="text" name="emergency_contact"></li>
+                	<li><label><span>&#42;</span>Emergency Contact Information</label>
+               		     (<input type="text" name="emergency_area_phone" size="4" maxlength="3" />)  
+                 		 <input type="text" name="emergency_prefix_phone" size="4" maxlength="3" />
+               		     <input type="text" name="emergency_phone" size="5" maxlength="4" /></li> 	
+    	 		</ul>
+    	 </fieldset>
+
+         <div>
+            <div id = "program_selected">
+              <label>Select program</label>
+                <input type="checkbox" name="program[]" value=1>&nbsp; BasketBall &nbsp;
+                <input type="checkbox" name="program[]" value=2>&nbsp; BaseBall &nbsp;
+                <input type="checkbox" name="program[]" value=3>&nbsp; Physical Education &nbsp;
+                <input type="checkbox" name="program[]" value=4>&nbsp; Band Camp &nbsp;
+                <input type="checkbox" name="program[]" value=5>&nbsp; Swimming &nbsp;
+                <input type="checkbox" name="program[]" value=6>&nbsp; Nature Discovery &nbsp;
+            </div>
+         </div>
+
+
+        <div id="message_line">&nbsp;</div>
+        <div id="button_panel">  
+            <input type="reset" value="Clear Data" class="button" />
+            <input type="button" value="Submit Data"  class="button" id="send_data" />  
+            <h2 id="status"></h2>
+        </div>                      
+        </form>
+        
+    </div>
+    </body>
+</html>
